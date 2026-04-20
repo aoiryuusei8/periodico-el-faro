@@ -5,21 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>El Faro - Periódico Local</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <style>
+    .card, .box {
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        transition: transform 0.2s;
+    }
+    .card:hover {
+        transform: translateY(-5px);
+    }
+    .shadow {
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    </style>
 </head>
 <body>
 
-    <header style="text-align: center;"></headerstyle>
-        <img src="logotipo-faro.jpeg" alt="Logotipo El Faro" width="500">
-        <h1>El Faro</h1>
-    </header>
+<div class="notification is-danger is-marginless is-radiusless has-text-centered">
+    <button class="delete"></button>
+    <strong>ÚLTIMA HORA:</strong> Se reportan nuevamente fuertes alzas en el precio de los combustibles para este jueves. 
+    <a href="#negocios" class="has-text-white" style="text-decoration: underline;">Leer más</a>
+</div>
 
-    <nav style="text-align: center;">
-        <ul style="display: inline-block; text-align: left;">
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#deporte">Deporte</a></li>
-            <li><a href="#negocios">Negocios</a></li>
-        </ul>
-    </nav>
+<section class="hero is-link is-bold">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <figure class="image is-inline-block mb-3" style="width: 300px;">
+                <img src="logotipo-faro.jpeg" alt="Logo El Faro" class="is-rounded shadow">
+            </figure>
+            <h1 class="title is-1">El Faro</h1>
+            <h2 class="subtitle">La guía informativa de la región</h2>
+        </div>
+    </div>
+</section>
+
+<nav class="navbar is-link" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="#inicio">
+        <strong>EL FARO</strong>
+      </a>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navbarMenu" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="#inicio">Inicio</a>
+        <a class="navbar-item" href="#deporte">Deportes</a>
+        <a class="navbar-item" href="#negocios">Negocios</a>
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-light is-outlined">Suscribirse</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
 
 <main class="section">
     <div class="container">
@@ -33,7 +83,7 @@
                     <div class="card mb-5">
                         <div class="card-image">
                             <figure class="image is-16by9">
-                                <img src="cadem.webp" alt="Encuesta Cadem">
+                                <img src="cadem.webp" alt="Encuesta Cadem" class="is-fullwidth">
                             </figure>
                         </div>
                         <div class="card-content">
@@ -66,7 +116,10 @@
                             <h3 class="title is-4 mt-2">Estudiante asesina a Inspectora en establecimiento de Calama</h3>
                             <div class="content">
                                 Conmoción generó el ataque en Calama, región de Antofagasta, que se registró en horas de la mañana de este viernes 27 de marzo, luego de que un estudiante asesinara a una inspectora en un establecimiento educacional. En el lugar, falleció una inspectora y otras cuatro personas resultaron con lesiones.  Con el correr de las horas se conoció que de los cuatro lesionados, dos se encuentran en estado grave (una mujer adulta y un menor de edad). Asimismo, tres de los heridos son estudiantes del establecimiento educacional.
-                                <img src="arsenal.jpeg" alt="Armas de H.M."><audio src="calama.mp3" controls class="mt-3" style="width: 95.3%;"></audio> 
+                            <figure class="image is-16by9">
+                                <img src="arsenal.jpeg" alt="Armas de H.M." class="is-fullwidth">
+                            </figure>
+                            <audio src="calama.mp3" controls class="mt-3" style="width: 100%;"></audio> 
                             </div>
                         </div>
                     </div>
@@ -122,63 +175,139 @@
                     </div>
                     </section>
             </div>
-
-            <aside class="column is-4" id="deporte">
-                <h2 class="title is-4 has-text-grey">Deportes</h2>
-                
-                <div class="box p-3">
-                    <article class="media">
-                        <div class="media-left">
-                            <figure class="image is-64x64">
-                                <img src="antonelli.jpg" alt="Antonelli" class="is-rounded">
-                            </figure>
-                        </div>
-                        <div class="media-content">
-                            <p class="title is-6">Antonelli gana el GP de Japón y hace historia</p>
-                            <p class="subtitle is-7">Fórmula 1</p>
-                            <p>Kimi Antonelli se convierte en el líder más joven de un campeonato en la historia de la F1 tras su victoria en Suzuka.</p>
-                        </div>
-                    </article>
-                </div>
-
-                <div class="box p-3">
-                    <article class="media">
-                        <div class="media-left">
-                            <figure class="image is-64x64">
-                                <img src="verstappen.jpg" alt="Verstappen" class="is-rounded">
-                            </figure>
-                        </div>
-                        <div class="media-content">
-                            <p class="title is-6">Verstappen analiza retirarse</p>
-                            <p class="subtitle is-7">Fórmula 1</p>
-                            <p>Debido a las nuevas reglas del campeonato, el genio Max Verstappen evalúa dejar la categoría al final de esta temporada, por lo que las próximas semanas serán cruciales para su futuro en el deporte.</p>
-                        </div>
-                    </article>
-                </div>
-
-                <div class="box p-3">
-                    <article class="media">
-                        <div class="media-left">
-                            <figure class="image is-64x64">
-                                <img src="kehr.webp" alt="Gabriel Kehr" class="is-rounded">
-                            </figure>
-                        </div>
-                        <div class="media-content">
-                            <p class="title is-6">Kehr registra gran serie en Temuco</p>
-                            <p class="subtitle is-7">Atletismo</p>
-                            <p>El ex-campeón panamericano de lanzamiento de marillo, Gabriel Kehr, registra 76.52 metros éste sábado 28 de marzo durante el torneo realizado en Temuco.</p>
-                        </div>
-                    </article>
-                </div>
-            </aside>
-
+<aside class="column is-4">
+    <div style="position: sticky; top: 20px;">
+        
+        <div class="box has-background-light">
+            <p class="menu-label has-text-weight-bold">Explorar Secciones</p>
+            <ul class="menu-list">
+                <li><a href="#inicio" class="is-active">Portada</a></li>
+                <li><a href="#deporte">Deportes</a></li>
+                <li><a href="#negocios">Negocios</a></li>
+            </ul>
         </div>
+
+        <h3 class="title is-5 mt-5">Más Leídas</h3>
+        <div class="box p-3">
+            <article class="media">
+                <div class="media-left">
+                    <figure class="image is-64x64">
+                        <img src="combustible.jpg" alt="Noticia" class="is-rounded" class="is-fullwidth">
+                    </figure>
+                </div>
+                <div class="media-content">
+                    <p class="title is-6">Traspaso de alzas de combustibles a precios</p>
+                    <p class="subtitle is-7">Transporte</p>
+                </div>
+            </article>
+        </div>
+
+        <div id="deporte" class="mt-6">
+            <h2 class="title is-4 has-text-grey">Deportes</h2>
+            
+            <div class="box p-3">
+                <article class="media">
+                    <div class="media-left">
+                        <figure class="image is-64x64">
+                            <img src="antonelli.jpg" alt="Antonelli" class="is-rounded">
+                        </figure>
+                    </div>
+                    <div class="media-content">
+                        <p class="title is-6">Antonelli gana el GP de Japón y hace historia</p>
+                        <p class="subtitle is-7">Fórmula 1</p>
+                        <p class="is-size-7">Kimi Antonelli se convierte en el líder más joven de un campeonato en la historia de la F1 tras su victoria en Suzuka.</p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="box p-3">
+                <article class="media">
+                    <div class="media-left">
+                        <figure class="image is-64x64">
+                            <img src="verstappen.jpg" alt="Verstappen" class="is-rounded">
+                        </figure>
+                    </div>
+                    <div class="media-content">
+                        <p class="title is-6">Verstappen analiza retirarse</p>
+                        <p class="subtitle is-7">Fórmula 1</p>
+                        <p class="is-size-7">Debido a las nuevas reglas del campeonato, el genio Max Verstappen evalúa dejar la categoría al final de esta temporada, por lo que las próximas semanas serán cruciales para su futuro en el deporte.</p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="box p-3">
+                <article class="media">
+                    <div class="media-left">
+                        <figure class="image is-64x64">
+                            <img src="kehr.webp" alt="Gabriel Kehr" class="is-rounded">
+                        </figure>
+                    </div>
+                    <div class="media-content">
+                        <p class="title is-6">Kehr registra gran serie en Temuco</p>
+                        <p class="subtitle is-7">Atletismo</p>
+                        <p class="is-size-7">El ex-campeón panamericano de lanzamiento de marillo, Gabriel Kehr, registra 76.52 metros éste sábado 28 de marzo durante el torneo realizado en Temuco.</p>
+                    </div>
+                </article>
+        </div> 
+
+        </div> </div> </aside> </div> </div> </main>
+
+<footer class="footer has-background-dark has-text-grey-light">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-4">
+                <h4 class="title is-5 has-text-white">Sobre El Faro</h4>
+                <p>Periodismo local independiente de Chile.</p>
+            </div>
+            <div class="column is-4">
+                <h4 class="title is-5 has-text-white">Secciones</h4>
+                <ul>
+                    <li><a href="#inicio" class="has-text-grey-light">Noticias Generales</a></li>
+                    <li><a href="#deporte" class="has-text-grey-light">Deportes</a></li>
+                    <li><a href="#negocios" class="has-text-grey-light">Negocios</a></li>
+                </ul>
+            </div>
+            <div class="column is-4">
+                <h4 class="title is-5 has-text-white">Suscríbete</h4>
+                <div class="field has-addons">
+                    <div class="control is-expanded">
+                        <input class="input" type="email" placeholder="Tu email">
+                    </div>
+                    <div class="control">
+                        <button class="button is-link">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr style="background-color: #4a4a4a;">
+        <p class="has-text-centered">&copy; 2026 El Faro. Desarrollado para Taller de Aplicaciones.</p>
     </div>
-</main>
+</footer>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
 
-    <footer>
-        <p>&copy; 2026 Periódico El Faro - Todos los derechos reservados.</p>
-    </footer>
+    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
 
+    if ($navbarBurgers.length > 0) {
+      $navbarBurgers.forEach( el => {
+        el.addEventListener('click', () => {
+          const target = el.dataset.target;
+          const $target = document.getElementById(target);
+
+          el.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
+        });
+      });
+    }
+
+    (document.querySelectorAll('.notification .delete') || []).forEach(($delete) => {
+      const $notification = $delete.parentNode;
+
+      $delete.addEventListener('click', () => {
+        $notification.parentNode.removeChild($notification);
+      });
+    });
+  });
+</script>
 </body>
 </html>
