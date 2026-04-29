@@ -259,7 +259,7 @@
     <div class="container">
         <div class="columns is-centered">
             <div class="column is-6">
-                <form action="index.php?action=registrar" method="POST" class="box shadow">
+                <form action="<?php echo htmlspecialchars('index.php?action=registrar'); ?>" method="POST" class="box shadow">
                     <h3 class="title is-4 has-text-centered">Registro de Lector</h3>
                     <p class="subtitle is-6 has-text-centered mb-5">Únete a la comunidad de El Faro</p>
                     
@@ -303,7 +303,7 @@
             </div>
   <div class="column is-4">
     <h4 class="title is-5 has-text-white">Contacto</h4>
-    <form action="index.php?action=contactar" method="POST">
+    <form action="<?php echo htmlspecialchars('index.php?action=contactar'); ?>" method="POST">
         <div class="field">
             <div class="control">
                 <input class="input is-small" type="text" name="nom" placeholder="Tu nombre" required>
